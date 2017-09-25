@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="small" format="reference|dimension" />
+    <attr name="middle" format="reference|dimension" />
+    <attr name="big" format="reference|dimension" />
+    <attr name="app_background_color" format="reference|color"/>
+    <attr name="app_title_color" format="reference|color"/>
+    <attr name="context_text_color" format="reference|color"/>
+    <attr name="title_text_color" format="reference|color"/>
+    <attr name="app_contrast_color" format="reference|color"/>
+</resources>
