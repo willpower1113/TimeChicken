@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_small">12sp</dimen>
+    <dimen name="default_center">14sp</dimen>
+    <dimen name="default_big">16sp</dimen>
+
+    <dimen name="add1_size_small">14sp</dimen>
+    <dimen name="add1_size_center">16sp</dimen>
+    <dimen name="add1_size_big">18sp</dimen>
+
+    <dimen name="add2_size_small">16sp</dimen>
+    <dimen name="add2_size_center">18sp</dimen>
+    <dimen name="add2_size_big">20sp</dimen>
+
+    <dimen name="add3_size_small">18sp</dimen>
+    <dimen name="add3_size_center">20sp</dimen>
+    <dimen name="add3_size_big">22sp</dimen>
+</resources>
