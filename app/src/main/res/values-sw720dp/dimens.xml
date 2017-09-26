@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><resources>    <dimen name="default_small">27.0sp</dimen>
-    <dimen name="default_center">31.5sp</dimen>
-    <dimen name="default_big">36.0sp</dimen>
-    <dimen name="add1_size_small">31.5sp</dimen>
-    <dimen name="add1_size_center">36.0sp</dimen>
-    <dimen name="add1_size_big">40.5sp</dimen>
-    <dimen name="add2_size_small">36.0sp</dimen>
-    <dimen name="add2_size_center">40.5sp</dimen>
-    <dimen name="add2_size_big">45.0sp</dimen>
-    <dimen name="add3_size_small">40.5sp</dimen>
-    <dimen name="add3_size_center">45.0sp</dimen>
-    <dimen name="add3_size_big">49.5sp</dimen>
+<?xml version="1.0" encoding="utf-8"?><resources>    <dimen name="default_small">40.5dp</dimen>
+    <dimen name="default_center">45.0dp</dimen>
+    <dimen name="default_big">54.0dp</dimen>
+    <dimen name="add1_size_small">49.5dp</dimen>
+    <dimen name="add1_size_center">54.0dp</dimen>
+    <dimen name="add1_size_big">63.0dp</dimen>
+    <dimen name="add2_size_small">58.5dp</dimen>
+    <dimen name="add2_size_center">63.0dp</dimen>
+    <dimen name="add2_size_big">72.0dp</dimen>
 </resources>

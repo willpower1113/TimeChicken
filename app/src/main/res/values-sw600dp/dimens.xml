@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="default_small">22.44sp</dimen>
-    <dimen name="default_center">26.18sp</dimen>
-    <dimen name="default_big">29.92sp</dimen>
-    <dimen name="add1_size_small">26.18sp</dimen>
-    <dimen name="add1_size_center">29.92sp</dimen>
-    <dimen name="add1_size_big">33.660000000000004sp</dimen>
-    <dimen name="add2_size_small">29.92sp</dimen>
-    <dimen name="add2_size_center">33.660000000000004sp</dimen>
-    <dimen name="add2_size_big">37.400000000000006sp</dimen>
-    <dimen name="add3_size_small">33.660000000000004sp</dimen>
-    <dimen name="add3_size_center">37.400000000000006sp</dimen>
-    <dimen name="add3_size_big">41.14sp</dimen>
+<?xml version="1.0" encoding="utf-8"?><resources>    <dimen name="default_small">33.660000000000004dp</dimen>
+    <dimen name="default_center">37.400000000000006dp</dimen>
+    <dimen name="default_big">44.88dp</dimen>
+    <dimen name="add1_size_small">41.14dp</dimen>
+    <dimen name="add1_size_center">44.88dp</dimen>
+    <dimen name="add1_size_big">52.36dp</dimen>
+    <dimen name="add2_size_small">48.620000000000005dp</dimen>
+    <dimen name="add2_size_center">52.36dp</dimen>
+    <dimen name="add2_size_big">59.84dp</dimen>
 </resources>

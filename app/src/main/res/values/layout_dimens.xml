@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_margin">@dimen/x12</dimen>
+    <dimen name="vertical_margin">@dimen/y10</dimen>
+
+    <dimen name="horizontal_padding">@dimen/x8</dimen>
+    <dimen name="vertical_padding">@dimen/y6</dimen>
+
+    <dimen name="title_height">@dimen/y35</dimen>
+</resources>

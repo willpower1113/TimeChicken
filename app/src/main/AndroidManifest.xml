@@ -8,8 +8,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/App_TextSize_Small_Day"
         android:supportsRtl="true">
-        <activity android:name=".HomeActivity">
+        <activity android:name=".activity.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.setting.AppSettingActivity" />
+        <activity android:name=".activity.note.AddNotesActivity" />
     </application>
 
 </manifest>

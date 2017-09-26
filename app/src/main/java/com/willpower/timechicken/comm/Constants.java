@@ -5,24 +5,22 @@ package com.willpower.timechicken.comm;
  */
 
 public final class Constants {
-
     /**
      * SharedPreferences
      */
-    public final static String SP_THEME = "app_theme";
     public final static String PREFERENCE_NAME = "time_chicken";
+    public final static String SP_TEXT = "app_text_size";
+    public final static String SP_DN = "app_day_night";
+
 
 
     /**
      * Theme
      */
-    public final static String THEME_NIGHT_SMALL = "theme_night_small";
-    public final static String THEME_NIGHT_MIDDLE = "theme_night_middle";
-    public final static String THEME_NIGHT_BIG = "theme_night_big";
+    public final static String THEME_NIGHT = "theme_night";
+    public final static String THEME_DAY = "theme_day";
 
-    public final static String THEME_DAY_SMALL = "theme_day_small";
-    public final static String THEME_DAY_MIDDLE = "theme_day_middle";
-    public final static String THEME_DAY_BIG = "theme_day_big";
-
-
+    public final static String THEME_BIG = "theme_big";
+    public final static String THEME_MIDDLE = "theme_middle";
+    public final static String THEME_SMALL = "theme_small";
 }

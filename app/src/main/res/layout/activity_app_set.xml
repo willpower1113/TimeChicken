@@ -2,6 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <include layout="@layout/include_toolbar"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -10,42 +13,44 @@
         android:textSize="?middle"
         android:layout_margin="@dimen/x20"/>
     <RadioGroup
+        android:id="@+id/mRadios"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x30"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/x20"
         android:layout_marginRight="@dimen/x20">
-
         <RadioButton
+            android:id="@+id/radio_small"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="小号字体"
+            android:text="小号"
             android:textColor="?context_text_color"
             android:textSize="?small">
         </RadioButton>
         <RadioButton
+            android:id="@+id/radio_middle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="中号字体"
+            android:text="中号"
             android:textColor="?context_text_color"
-            android:textSize="?small">
+            android:textSize="?middle">
         </RadioButton>
         <RadioButton
+            android:id="@+id/radio_big"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="大号字体"
+            android:text="大号"
             android:textColor="?context_text_color"
-            android:textSize="?small">
+            android:textSize="?big">
         </RadioButton>
     </RadioGroup>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y30"
         android:layout_marginTop="@dimen/y10">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -55,6 +60,7 @@
             android:textColor="?context_text_color"
             android:textSize="?middle" />
         <Switch
+            android:id="@+id/switch_n_d_theme"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"

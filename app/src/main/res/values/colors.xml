@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="night_color_bg">#000000</color>
+    <color name="night_color_bg">#3c3f41</color>
     <color name="night_color_title">#303F9F</color>
     <color name="night_title_color_text">#eee7ce</color>
     <color name="night_context_color_text">#eee7ce</color>
@@ -11,6 +11,6 @@
     <color name="day_color_bg">#eee7ce</color>
     <color name="day_color_title">#3F51B5</color>
     <color name="day_color_title_text">#eee7ce</color>
-    <color name="day_color_context_text">#000000</color>
+    <color name="day_color_context_text">#3c3f41</color>
     <color name="day_color_contrast">#FF4081</color>
 </resources>
