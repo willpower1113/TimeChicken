@@ -97,7 +97,10 @@ public class AppButton extends AppCompatButton implements GestureDetector.OnGest
      * 监听手势
      */
     private GestureDetector mGestureDetector;
-
+    /**
+     * 对外提供绘制接口
+     */
+    private DrawListener mListener;
     /**
      * params
      */
@@ -121,24 +124,24 @@ public class AppButton extends AppCompatButton implements GestureDetector.OnGest
 
     private void init(Context context, AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs,R.styleable.AppButton);
-        selectColor = ta.getColor(R.styleable.AppButton_selectColor, DEFAULT_SELECT_COLOR);
-        normalColor = ta.getColor(R.styleable.AppButton_normalColor, DEFAULT_NORMAL_COLOR);
-        coverColor = ta.getColor(R.styleable.AppButton_coverColor, DEFAULT_COVER_COLOR);
-        clickModel = ta.getInt(R.styleable.AppButton_clickModel, CLICK_MODEL_COVER);
-        shadowColor = ta.getColor(R.styleable.AppButton_appShadowColor, DEFAULT_SHADOW_COLOR);
-        shadowRadios = ta.getFloat(R.styleable.AppButton_appShadowRadios, DEFAULT_SHADOW_RADIOS);
-        appNoShadow = ta.getBoolean(R.styleable.AppButton_appNoShadow, DEFAULT_NO_SHADOW);
-        shadowOffsetX = ta.getFloat(R.styleable.AppButton_appShadowOffsetX, DEFAULT_SHADOW_OFFSET_X);
-        shadowOffsetY = ta.getFloat(R.styleable.AppButton_appShadowOffsetY, DEFAULT_SHADOW_OFFSET_Y);
+        selectColor = ta.getColor(R.styleable.AppButton_btnSelectColor, DEFAULT_SELECT_COLOR);
+        normalColor = ta.getColor(R.styleable.AppButton_btnNormalColor, DEFAULT_NORMAL_COLOR);
+        coverColor = ta.getColor(R.styleable.AppButton_btnCoverColor, DEFAULT_COVER_COLOR);
+        clickModel = ta.getInt(R.styleable.AppButton_btnClickModel, CLICK_MODEL_COVER);
+        shadowColor = ta.getColor(R.styleable.AppButton_btnShadowColor, DEFAULT_SHADOW_COLOR);
+        shadowRadios = ta.getFloat(R.styleable.AppButton_btnShadowRadios, DEFAULT_SHADOW_RADIOS);
+        appNoShadow = ta.getBoolean(R.styleable.AppButton_btnNoShadow, DEFAULT_NO_SHADOW);
+        shadowOffsetX = ta.getFloat(R.styleable.AppButton_btnShadowOffsetX, DEFAULT_SHADOW_OFFSET_X);
+        shadowOffsetY = ta.getFloat(R.styleable.AppButton_btnShadowOffsetY, DEFAULT_SHADOW_OFFSET_Y);
         rippleDuration = DEFAULT_RIPPLE_DURATION;
-        rippleColor = ta.getColor(R.styleable.AppButton_appRippleColor, DEFAULT_RIPPLE_COLOR);
-        rippleAlpha = ta.getInt(R.styleable.AppButton_appRippleAlpha, DEFAULT_RIPPLE_ALPHA);
-        appNoRipple = ta.getBoolean(R.styleable.AppButton_appNoRipple, DEFAULT_NO_RIPPLE);
-        ripplePosition = ta.getInt(R.styleable.AppButton_ripplePosition, POSITION_DOWN);
-        strokeWidth = ta.getFloat(R.styleable.AppButton_appStrokeWidth, DEFAULT_STROKE_WIDTH);
-        strokeColor = ta.getColor(R.styleable.AppButton_appStrokeColor, DEFAULT_STROKE_COLOR);
-        filletX = ta.getFloat(R.styleable.AppButton_filletX, DEFAULT_FILLET_RADIO_X);
-        filletY = ta.getFloat(R.styleable.AppButton_filletY, DEFAULT_FILLET_RADIO_Y);
+        rippleColor = ta.getColor(R.styleable.AppButton_btnRippleColor, DEFAULT_RIPPLE_COLOR);
+        rippleAlpha = ta.getInt(R.styleable.AppButton_btnRippleAlpha, DEFAULT_RIPPLE_ALPHA);
+        appNoRipple = ta.getBoolean(R.styleable.AppButton_btnNoRipple, DEFAULT_NO_RIPPLE);
+        ripplePosition = ta.getInt(R.styleable.AppButton_btnRipplePosition, POSITION_DOWN);
+        strokeWidth = ta.getFloat(R.styleable.AppButton_btnStrokeWidth, DEFAULT_STROKE_WIDTH);
+        strokeColor = ta.getColor(R.styleable.AppButton_btnStrokeColor, DEFAULT_STROKE_COLOR);
+        filletX = ta.getFloat(R.styleable.AppButton_btnFilletX, DEFAULT_FILLET_RADIO_X);
+        filletY = ta.getFloat(R.styleable.AppButton_btnFilletY, DEFAULT_FILLET_RADIO_Y);
         ta.recycle();
         setBackgroundColor(Color.TRANSPARENT);
         setGravity(CENTER);
@@ -159,6 +162,9 @@ public class AppButton extends AppCompatButton implements GestureDetector.OnGest
             drawFill(canvas, rectF);
         }
         super.onDraw(canvas);
+        if (null != mListener) {//对外提供绘制接口
+            mListener.drawSomething(canvas);
+        }
         //绘制覆盖层
         drawCover(canvas, rectF);
         //绘制波纹
@@ -307,5 +313,119 @@ public class AppButton extends AppCompatButton implements GestureDetector.OnGest
     private void setTouching(boolean isTouching) {
         this.isTouching = isTouching;
         postInvalidate();
+    }
+
+    public void setSelectColor(int selectColor) {
+        this.selectColor = selectColor;
+        postInvalidate();
+    }
+
+    public void setNormalColor(int normalColor) {
+        this.normalColor = normalColor;
+        postInvalidate();
+    }
+
+    public void setCoverColor(int coverColor) {
+        this.coverColor = coverColor;
+        postInvalidate();
+    }
+
+    public void setClickModel(int clickModel) {
+        this.clickModel = clickModel;
+        postInvalidate();
+    }
+
+    public void setShadowColor(int shadowColor) {
+        this.shadowColor = shadowColor;
+        postInvalidate();
+    }
+
+    public void setShadowRadios(float shadowRadios) {
+        this.shadowRadios = shadowRadios;
+        postInvalidate();
+    }
+
+    public void setAppNoShadow(boolean appNoShadow) {
+        this.appNoShadow = appNoShadow;
+        postInvalidate();
+    }
+
+    public void setShadowOffsetX(float shadowOffsetX) {
+        this.shadowOffsetX = shadowOffsetX;
+        postInvalidate();
+    }
+
+    public void setShadowOffsetY(float shadowOffsetY) {
+        this.shadowOffsetY = shadowOffsetY;
+        postInvalidate();
+    }
+
+    public void setRippleDuration(long rippleDuration) {
+        this.rippleDuration = rippleDuration;
+        postInvalidate();
+    }
+
+    public void setRippleColor(int rippleColor) {
+        this.rippleColor = rippleColor;
+        postInvalidate();
+    }
+
+    public void setRippleAlpha(int rippleAlpha) {
+        this.rippleAlpha = rippleAlpha;
+        postInvalidate();
+    }
+
+    public void setAppNoRipple(boolean appNoRipple) {
+        this.appNoRipple = appNoRipple;
+        postInvalidate();
+    }
+
+    public void setRipplePosition(int ripplePosition) {
+        this.ripplePosition = ripplePosition;
+        postInvalidate();
+    }
+
+    public void setDrawingRipple(boolean drawingRipple) {
+        isDrawingRipple = drawingRipple;
+        postInvalidate();
+    }
+
+    public void setRippleRadios(float rippleRadios) {
+        this.rippleRadios = rippleRadios;
+        postInvalidate();
+    }
+
+    public void setRippleX(float rippleX) {
+        this.rippleX = rippleX;
+        postInvalidate();
+    }
+
+    public void setRippleY(float rippleY) {
+        this.rippleY = rippleY;
+        postInvalidate();
+    }
+
+    public void setStrokeWidth(float strokeWidth) {
+        this.strokeWidth = strokeWidth;
+        postInvalidate();
+    }
+
+    public void setStrokeColor(int strokeColor) {
+        this.strokeColor = strokeColor;
+        postInvalidate();
+    }
+
+    public void setFilletX(float filletX) {
+        this.filletX = filletX;
+        postInvalidate();
+    }
+
+    public void setFilletY(float filletY) {
+        this.filletY = filletY;
+        postInvalidate();
+    }
+
+    public void setmListener(DrawListener mListener) {
+        this.mListener = mListener;
     }
 }

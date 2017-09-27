@@ -23,15 +23,14 @@
             android:paddingTop="@dimen/vertical_margin" />
     </android.support.v4.widget.SwipeRefreshLayout>
 
-
     <com.willpower.timechicken.weight.AppRoundImageButton
         android:layout_width="@dimen/x50"
         android:layout_height="@dimen/x50"
         android:layout_gravity="bottom|right"
         android:layout_margin="@dimen/vertical_margin"
-        android:padding="@dimen/x5"
-        app:appShadowRadios="8"
-        app:normalColor="@color/colorAccent"
-        app:srcCompat="@drawable/ic_add" />
+        android:padding="@dimen/x10"
+        app:imageShadowRadios="8"
+        app:imageNormalColor="@color/colorAccent"
+        app:srcCompat="@drawable/ic_add"/>
 
 </FrameLayout>

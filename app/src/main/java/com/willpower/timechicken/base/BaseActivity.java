@@ -8,12 +8,12 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.willpower.timechicken.R;
 import com.willpower.timechicken.TCApplication;
 import com.willpower.timechicken.utils.ActivityManager;
+import com.willpower.timechicken.weight.AppRoundImageButton;
 
 /**
  * MVP activity基类
@@ -104,7 +104,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IView {
 
     /*菜单按钮*/
     protected void setToolbarMenu(View.OnClickListener listener) {
-        ImageButton toolbarMenu = (ImageButton) findViewById(R.id.toolbar_menu);
+        AppRoundImageButton toolbarMenu = (AppRoundImageButton) findViewById(R.id.toolbar_menu);
         if (toolbarMenu != null) {
             toolbarMenu.setVisibility(View.VISIBLE);
             toolbarMenu.setOnClickListener(listener);
@@ -123,7 +123,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IView {
 
     /*返回按钮*/
     protected void setToolbarNavigation() {
-        ImageButton toolbarBack = (ImageButton) findViewById(R.id.toolbar_back);
+        AppRoundImageButton toolbarBack = (AppRoundImageButton) findViewById(R.id.toolbar_back);
         if (toolbarBack != null) {
             toolbarBack.requestFocus();//软键盘不自动弹出
             toolbarBack.setOnClickListener(new View.OnClickListener() {

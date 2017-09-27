@@ -8,7 +8,8 @@ import android.view.View;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.willpower.timechicken.R;
-import com.willpower.timechicken.activity.note.AddNotesActivity;
+import com.willpower.timechicken.activity.note.NoteActivity;
+import com.willpower.timechicken.activity.setting.AppSettingActivity;
 import com.willpower.timechicken.adapter.NotesAdapter;
 import com.willpower.timechicken.base.BaseActivity;
 
@@ -32,6 +33,12 @@ public class HomeActivity extends BaseActivity {
 
     private void init() {
         rv_notes = (RecyclerView) findViewById(R.id.rv_notes);
+        setToolbarAction("个性化", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jumpActivity(new Intent(context, AppSettingActivity.class));
+            }
+        });
     }
 
     private void initRecyclerView() {
@@ -40,7 +47,7 @@ public class HomeActivity extends BaseActivity {
         rv_notes.addOnItemTouchListener(new OnItemChildClickListener() {
             @Override
             public void onSimpleItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-                jumpActivity(new Intent(context, AddNotesActivity.class));
+                jumpActivity(new Intent(context, NoteActivity.class));
             }
         });
     }

@@ -15,9 +15,9 @@
         android:background="?attr/selectableItemBackground"
         android:padding="@dimen/x5"
         android:scaleType="centerInside"
-        app:appNoRipple="true"
-        app:appNoShadow="true"
-        app:clickModel="cover"
+        app:imageNoRipple="true"
+        app:imageNoShadow="true"
+        app:imageClickModel="cover"
         app:srcCompat="@drawable/ic_arrow_back" />
 
     <TextView
@@ -38,8 +38,8 @@
         android:layout_marginRight="@dimen/x15"
         android:padding="@dimen/x5"
         android:visibility="gone"
-        app:appNoShadow="true"
-        app:clickModel="cover" />
+        app:imageNoShadow="true"
+        app:imageClickModel="cover" />
 
     <TextView
         android:id="@+id/toolbar_action"
