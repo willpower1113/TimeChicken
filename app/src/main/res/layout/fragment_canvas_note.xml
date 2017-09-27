@@ -5,76 +5,91 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y25"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="线条"
-            android:textColor="?context_text_color"
-            android:textSize="?middle" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="颜色"
-            android:textColor="?context_text_color"
-            android:textSize="?middle" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="背景"
-            android:textColor="?context_text_color"
-            android:textSize="?middle" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y25"
+        android:layout_height="@dimen/y20"
         android:orientation="horizontal">
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="线条"
+                android:textColor="?context_text_color"
+                android:textSize="?small" />
         <!--线条粗细-->
         <com.willpower.timechicken.weight.AppImageView
             android:id="@+id/image_line_width"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/horizontal_margin"
-            android:layout_marginRight="@dimen/horizontal_margin"
-            android:layout_weight="1"
             app:imageNoShadow="true"
             app:imageStrokeColor="@color/colorPrimary"
             app:imageStrokeWidth="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="颜色"
+                android:textColor="?context_text_color"
+                android:textSize="?small" />
         <!--线条颜色-->
         <com.willpower.timechicken.weight.AppButton
             android:id="@+id/image_line_color"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/horizontal_margin"
-            android:layout_marginRight="@dimen/horizontal_margin"
             android:layout_weight="1"
             app:btnNoShadow="true"
             app:btnNormalColor="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="背景"
+                android:textColor="?context_text_color"
+                android:textSize="?small" />
         <!--背景颜色-->
         <com.willpower.timechicken.weight.AppButton
             android:id="@+id/image_background_color"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/horizontal_margin"
-            android:layout_marginRight="@dimen/horizontal_margin"
             android:layout_weight="1"
             app:btnNoShadow="true"
             app:btnNormalColor="@color/colorPrimary"/>
+        </LinearLayout>
+            <!--清除-->
+            <com.willpower.timechicken.weight.AppButton
+                android:id="@+id/image_clear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:btnNoShadow="true"
+                android:text="清除"
+                android:textColor="?title_text_color"
+                android:textSize="?small"
+                app:btnNormalColor="@color/colorPrimary" />
     </LinearLayout>
     <com.willpower.timechicken.weight.NoteCanvasView
         android:layout_width="match_parent"
